@@ -1,0 +1,62 @@
+/* =========================================================
+   grid2.css — solo lo específico de Ohzy_copy.html (Presentación)
+   ========================================================= */
+
+body {
+  padding-top: 76px; /* espacio para el navbar fijo (fixed-top) */
+}
+
+/* ===== Video + texto lado a lado (flexbox) ===== */
+.presentacion {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 1rem auto 4rem;
+  padding: 0 1.5rem;
+}
+
+.presentacion-video {
+  flex: 1 1 480px;
+}
+
+.presentacion-video video {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: block;
+  background-color: var(--navy);
+}
+
+.presentacion-texto {
+  flex: 1 1 320px;
+}
+
+.presentacion-texto h2 {
+  color: var(--navy);
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.presentacion-texto p {
+  color: #4b5a66;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+video {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 767.98px) {
+  .navbar-toggler {
+    display: block !important;
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  }
+  .navbar-collapse:not(.show) {
+    display: none !important;
+  }
+}

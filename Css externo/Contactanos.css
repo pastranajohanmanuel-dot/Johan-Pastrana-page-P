@@ -1,0 +1,84 @@
+/* =========================================================
+   Contactanos.css — solo lo específico de Contactanos.html
+   ========================================================= */
+
+body {
+  padding-top: 76px; /* espacio para el navbar fijo (fixed-top) */
+}
+
+/* ===== Franja azul de bienvenida ===== */
+.contacto-hero {
+  background: linear-gradient(135deg, var(--navy), var(--blue-deep));
+  color: var(--white);
+  text-align: center;
+  padding: 3rem 1.5rem 4rem;
+}
+
+.contacto-hero h1 {
+  font-size: 2.1rem;
+  margin-bottom: 0.6rem;
+}
+
+.contacto-hero p {
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* ===== Tarjeta partida en dos (flexbox) ===== */
+.contacto-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 950px;
+  margin: -2.5rem auto 4rem;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.contacto-info {
+  background-color: var(--blue-deep);
+  color: var(--white);
+  flex: 1 1 280px;
+  padding: 2.5rem 2rem;
+}
+
+.contacto-info h3 {
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+}
+
+.contacto-info p {
+  margin: 0 0 1.1rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+}
+
+.contacto-form {
+  background-color: var(--cream);
+  flex: 1 1 380px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.form-card {
+  background-color: var(--white);
+  border: 1px solid rgba(11, 39, 64, 0.1);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(11, 39, 64, 0.08);
+  padding: 1.8rem;
+  width: 100%;
+}
+@media (max-width: 767.98px) {
+  .navbar-toggler {
+    display: block !important;
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  }
+  .navbar-collapse:not(.show) {
+    display: none !important;
+  }
+}

@@ -1,0 +1,110 @@
+
+body {
+  padding-top: 76px;
+}
+
+.hero-slide {
+  height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+  padding: 2rem;
+}
+
+.hero-slide h1 {
+  font-size: clamp(1.8rem, 8vw, 3rem);
+  max-width: 700px;
+  margin: 0 auto 1rem;
+}
+
+.hero-slide p {
+  font-size: 1.1rem;
+  max-width: 500px;
+  margin: 0 auto 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.slide-1 { background: linear-gradient(135deg, var(--navy), var(--blue-deep)); }
+.slide-2 { background: linear-gradient(135deg, var(--blue-deep), var(--blue-mid)); }
+.slide-3 { background: linear-gradient(135deg, var(--blue-mid), #4a94bd); }
+
+/* ===== Franja de servicios (flexbox) ===== */
+.servicios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+}
+
+.servicio-card {
+  background-color: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.8rem;
+  flex: 1 1 260px;
+  max-width: 320px;
+  text-align: center;
+  border-top: 4px solid var(--gold);
+}
+
+.servicio-icon {
+  font-size: 2rem;
+}
+
+.servicio-card h3 {
+  color: var(--navy);
+  font-size: 1.2rem;
+  margin: 0.6rem 0 0.5rem;
+}
+
+.servicio-card p {
+  color: #4b5a66;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.footer-instagram {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-instagram i {
+    font-size: 18px;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-text-fill-color: transparent;
+}
+
+.footer-instagram:hover {
+    text-decoration: underline;
+}
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+    padding: 10px;
+  }
+  .columnas {
+    flex-direction: column; /* apila columnas una debajo de otra */
+  }
+}
+@media (max-width: 767.98px) {
+  .navbar-toggler {
+    display: block !important;
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  }
+  .navbar-collapse:not(.show) {
+    display: none !important;
+  }
+}

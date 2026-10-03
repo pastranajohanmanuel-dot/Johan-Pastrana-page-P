@@ -1,0 +1,124 @@
+/* =========================================================
+   base.css
+   Estilos COMPARTIDOS por las 4 páginas: variables de color,
+   tipografía, navbar y footer. Enlaza este archivo SIEMPRE
+   antes del CSS específico de cada página, así:
+
+   <link rel="stylesheet" href="Css externo/base.css">
+   <link rel="stylesheet" href="Css externo/grid.css">
+   ========================================================= */
+
+:root {
+  --navy: #0b2740;
+  --blue-deep: #124a72;
+  --blue-mid: #2f7aa6;
+  --gold: #e7b768;
+  --gold-soft: #f2cf94;
+  --cream: #f6f4ef;
+  --ink: #17232c;
+  --white: #ffffff;
+  --radius: 10px;
+  --shadow: 0 10px 30px rgba(11, 39, 64, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Source Sans 3", Arial, Helvetica, sans-serif;
+  color: var(--ink);
+  background-color: var(--cream);
+  margin: 0;
+}
+
+h1, h2, h3, .brand-font {
+  font-family: "Fraunces", Georgia, serif;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ===== Navbar (igual en las 4 páginas) ===== */
+.navbar {
+  background-color: var(--navy) !important;
+  border-bottom: 3px solid var(--gold);
+}
+
+.navbar-brand {
+  font-family: "Fraunces", Georgia, serif;
+  font-style: normal;
+  font-size: 1.4rem;
+  color: var(--white) !important;
+}
+
+.nav-link {
+  font-family: "Source Sans 3", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85) !important;
+  margin-left: 0.5rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--gold) !important;
+}
+
+/* ===== Botón dorado reutilizable ===== */
+.btn-gold {
+  display: inline-block;
+  background-color: var(--gold);
+  border: none;
+  color: var(--navy);
+  font-weight: 600;
+  padding: 0.7rem 1.8rem;
+  border-radius: var(--radius);
+  transition: background-color 0.2s ease;
+}
+
+.btn-gold:hover {
+  background-color: var(--gold-soft);
+  color: var(--navy);
+}
+
+/* ===== Título de sección reutilizable ===== */
+.section-title {
+  text-align: center;
+  color: var(--navy);
+  font-size: 2.2rem;
+  margin: 3rem 0 0.5rem;
+}
+
+.section-title span {
+  color: var(--blue-mid);
+}
+
+.section-underline {
+  width: 70px;
+  height: 4px;
+  background-color: var(--gold);
+  margin: 0.8rem auto 2.5rem;
+  border-radius: 2px;
+}
+
+/* ===== Footer compartido ===== */
+footer {
+  background-color: var(--navy);
+  color: rgba(255, 255, 255, 0.75);
+  padding: 1.8rem 1rem;
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 0.9rem;
+}
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+    padding: 10px;
+  }
+  .columnas {
+    flex-direction: column; /* apila columnas una debajo de otra */
+  }
+}
